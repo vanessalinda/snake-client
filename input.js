@@ -1,5 +1,6 @@
 let connection;
 
+// creating the input module, which is passed the connection object
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
@@ -10,8 +11,8 @@ const setupInput = (conn) => {
   return stdin;
 };
 
+// handling user inputs via keys
 const handleUserInput = (key) => {
-  // your code here
   if (key === "\u0003") {
     process.exit();
   }
